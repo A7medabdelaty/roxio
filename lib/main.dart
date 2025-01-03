@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:roxio/core/utils/app_routes.dart';
 
 void main() {
@@ -11,6 +12,7 @@ class RoxioApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(fontFamily: GoogleFonts.openSans().fontFamily),
       routes: AppRoutes.routes,
       debugShowCheckedModeBanner: false,
       title: 'Roxio',
