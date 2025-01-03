@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:roxio/services/register/view/register_view.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
@@ -25,10 +26,10 @@ class _SplashViewState extends State<SplashView> {
   }
 
   void _navigateToRegister() async {
-    await Future.delayed(const Duration(seconds: 3));
+    await Future.delayed(const Duration(seconds: 2));
     Navigator.pushReplacementNamed(
       context,
-      '/register',
+      RegisterView.routeName,
     );
   }
 
