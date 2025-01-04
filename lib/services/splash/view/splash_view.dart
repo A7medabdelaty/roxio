@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:roxio/services/register/view/register_view.dart';
+import 'package:roxio/services/register/presentation/view/register_view.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
