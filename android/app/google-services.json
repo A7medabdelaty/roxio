@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "2442173782",
+    "project_id": "roxio-354fa",
+    "storage_bucket": "roxio-354fa.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:2442173782:android:b36eaf6ce72396e2ef0af7",
+        "android_client_info": {
+          "package_name": "com.example.rexio"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3azQUxTCYz2a0zUxw0M7LWUrw4xXqjBA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:2442173782:android:086d79b19df664f4ef0af7",
+        "android_client_info": {
+          "package_name": "com.example.roxio"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3azQUxTCYz2a0zUxw0M7LWUrw4xXqjBA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
