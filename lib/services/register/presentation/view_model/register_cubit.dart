@@ -1,6 +1,5 @@
 import 'package:bloc/bloc.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:meta/meta.dart';
 import 'package:roxio/services/register/data/repos/register_repo.dart';
 
 part 'register_state.dart';
@@ -27,7 +26,7 @@ class RegisterCubit extends Cubit<RegisterState> {
         emit(RegisterCodeSent(verificationId));
       },
       codeAutoRetrievalTimeout: (String verificationId) {
-        emit(RegisterFailure('Code retrieval timeout'));
+        //emit(RegisterWaitingTimeOut('Code retrieval timeout'));
       },
     );
   }
