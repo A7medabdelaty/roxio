@@ -3,6 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:roxio/core/utils/app_routes.dart';
+import 'package:roxio/services/home/presentation/view/home_view.dart';
 
 import 'bloc_observer.dart';
 import 'firebase_options.dart';
@@ -22,6 +23,7 @@ class RoxioApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(fontFamily: GoogleFonts.openSans().fontFamily),
       routes: AppRoutes.routes,
+      initialRoute: HomeView.routeName,
       debugShowCheckedModeBanner: false,
       title: 'Roxio',
     );
