@@ -6,6 +6,14 @@ final class HomeInitial extends HomeState {}
 
 final class HomeGetCurrentLocationLoading extends HomeState {}
 
-final class HomeGetCurrentLocationSuccess extends HomeState {}
+final class HomeGetCurrentLocationSuccess extends HomeState {
+  final Position position;
 
-final class HomeGetCurrentLocationFailure extends HomeState {}
+  HomeGetCurrentLocationSuccess(this.position);
+}
+
+final class HomeGetCurrentLocationFailure extends HomeState {
+  final String errMessage;
+
+  HomeGetCurrentLocationFailure(this.errMessage);
+}

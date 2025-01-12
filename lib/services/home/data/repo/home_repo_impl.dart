@@ -8,14 +8,11 @@ import 'package:roxio/services/home/data/repo/home_repo.dart';
 class HomeRepoImpl extends HomeRepo {
   final LocationManager locationManager;
 
-  HomeRepoImpl({required this.locationManager});
+  HomeRepoImpl(this.locationManager);
 
   @override
   Future<Either<Failure, Position>> getCurrentLocation() async {
-    bool serviceEnabled = await locationManager.requestLocationService();
-    if (!serviceEnabled) {
-      return Left(MapFailure('Location service disabled.'));
-    }
+    await locationManager.requestLocationService();
 
     bool permissionGranted = await locationManager.requestLocationPermission();
     if (!permissionGranted) {
