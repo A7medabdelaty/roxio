@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class AppTextStyles {
+  static TextStyle text10 = TextStyle(
+    fontSize: 10,
+    color: Color(0xff0D1724),
+  );
   static TextStyle text16 = TextStyle(
     fontSize: 16,
     color: Color(0xff0D1724),
