@@ -17,6 +17,8 @@ class _CustomMapState extends State<CustomMap> {
   late GoogleMapController mapController;
   late final String _mapStyleString;
   late Position _currentPosition;
+  final Set<Marker> _mapMarkers = {};
+  late BitmapDescriptor mapIcon;
 
   @override
   void initState() {
@@ -24,6 +26,7 @@ class _CustomMapState extends State<CustomMap> {
       target: LatLng(0, 0),
     );
     _loadMapStyle();
+    initMapIconImage();
     super.initState();
   }
 
@@ -33,15 +36,8 @@ class _CustomMapState extends State<CustomMap> {
       listener: (context, state) {
         if (state is HomeGetCurrentLocationSuccess) {
           _currentPosition = state.position;
-          mapController.animateCamera(
-            CameraUpdate.newCameraPosition(
-              CameraPosition(
-                target: LatLng(
-                    _currentPosition.latitude, _currentPosition.longitude),
-                zoom: 15,
-              ),
-            ),
-          );
+          animateToCurrentLocation();
+          addCurrentLocationMarker();
         }
       },
       builder: (context, state) {
@@ -54,6 +50,7 @@ class _CustomMapState extends State<CustomMap> {
           initialCameraPosition: CameraPosition(
             target: LatLng(0, 0),
           ),
+          markers: _mapMarkers,
         );
       },
     );
@@ -65,5 +62,35 @@ class _CustomMapState extends State<CustomMap> {
     setState(() {
       _mapStyleString = response;
     });
+  }
+
+  void animateToCurrentLocation() {
+    mapController.animateCamera(
+      CameraUpdate.newCameraPosition(
+        CameraPosition(
+          target: LatLng(_currentPosition.latitude, _currentPosition.longitude),
+          zoom: 15,
+        ),
+      ),
+    );
+  }
+
+  void initMapIconImage() async {
+    mapIcon = await BitmapDescriptor.asset(
+      ImageConfiguration(
+        size: Size(35, 65),
+      ),
+      'assets/images/current_location_pin.png',
+    );
+  }
+
+  void addCurrentLocationMarker() {
+    _mapMarkers.add(
+      Marker(
+        markerId: MarkerId('currentLocationMarker'),
+        position: LatLng(_currentPosition.latitude, _currentPosition.longitude),
+        icon: mapIcon,
+      ),
+    );
   }
 }
