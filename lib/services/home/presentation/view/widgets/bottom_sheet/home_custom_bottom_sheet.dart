@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:roxio/core/utils/styles/app_colors.dart';
 import 'package:roxio/core/utils/widgets/custom_button.dart';
-import 'package:roxio/services/home/presentation/view/widgets/new_destination_widget.dart';
-import 'package:roxio/services/home/presentation/view/widgets/recent_destinations_list.dart';
+import 'package:roxio/services/home/presentation/view/widgets/bottom_sheet/new_destination_widget.dart';
+import 'package:roxio/services/home/presentation/view/widgets/bottom_sheet/recent_destinations_list.dart';
 
 class HomeCustomBottomSheet extends StatelessWidget {
   const HomeCustomBottomSheet({super.key});

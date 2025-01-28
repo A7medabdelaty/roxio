@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:roxio/core/utils/styles/text_styles.dart';
-import 'package:roxio/services/home/presentation/view/widgets/home_custom_bottom_sheet.dart';
+
+import 'bottom_sheet/home_custom_bottom_sheet.dart';
 
 class WhereToButton extends StatelessWidget {
   const WhereToButton({super.key});
