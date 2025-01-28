@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:roxio/core/utils/styles/text_styles.dart';
 
 import 'home_custom_icon.dart';
+import 'where_to_button.dart';
 
 class HomeFeaturedButtons extends StatelessWidget {
   const HomeFeaturedButtons({super.key});
@@ -32,41 +32,7 @@ class HomeFeaturedButtons extends StatelessWidget {
               ],
             ),
             SizedBox(height: 14),
-            ElevatedButton(
-              style: ButtonStyle(
-                alignment: Alignment.topLeft,
-                padding: WidgetStatePropertyAll(
-                  EdgeInsetsDirectional.symmetric(vertical: 10, horizontal: 25),
-                ),
-                backgroundColor: WidgetStatePropertyAll(Colors.white),
-              ),
-              onPressed: () {},
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'From: Wilson Terrace 219 W',
-                    style: AppTextStyles.text10,
-                  ),
-                  Row(
-                    spacing: 10,
-                    children: [
-                      Icon(
-                        FontAwesomeIcons.solidCircle,
-                        size: 10,
-                        color: Color(0xff1FCD6C),
-                      ),
-                      Text(
-                        'Where to?',
-                        style: AppTextStyles.text18.copyWith(
-                          color: Color(0xff0D1724),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
+            WhereToButton(),
             SizedBox(height: 14),
           ],
         ),

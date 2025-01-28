@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class AppTextStyles {
+abstract class AppTextStyles {
   static TextStyle text10 = TextStyle(
     fontSize: 10,
     color: Color(0xff0D1724),
